@@ -41,7 +41,7 @@ export default class TransactionScreen extends React.Component{
         const hasCameraPermissions=this.state.hasCameraPermissions;
         const scanned=this.state.scanned;
         const buttonState=this.state.buttonState;
-        if(buttonState !== "clicked" && hasCameraPermissions  ){
+        if(buttonState !== "normal" && hasCameraPermissions  ){
             return(
                 <BarCodeScanner
                  onBarCodeScanned={scanned? undefined:this.handleBarCodeScanned}
